@@ -1,0 +1,107 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+  <servlet>
+    <servlet-name>HelloServlet</servlet-name>
+    <servlet-class>webapp.servlet.HelloServlet</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Servlet</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet</servlet-name>
+    <url-pattern>/helloServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>HelloServlet2</servlet-name>
+    <servlet-class>webapp.servlet.HelloServlet</servlet-class>
+    <init-param>
+      <param-name>name</param-name>
+      <param-value>Servlet2</param-value>
+    </init-param>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>HelloServlet2</servlet-name>
+    <url-pattern>/helloServlet2</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>IndexController</servlet-name>
+    <servlet-class>webapp.servlet.IndexController</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>IndexController</servlet-name>
+    <url-pattern>/IndexController</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>TrueServlet</servlet-name>
+    <servlet-class>webapp.servlet.TrueServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>TrueServlet</servlet-name>
+    <url-pattern>/TrueServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>FalseServlet</servlet-name>
+    <servlet-class>webapp.servlet.FalseServlet</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>FalseServlet</servlet-name>
+    <url-pattern>/FalseServlet</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LoginProcess</servlet-name>
+    <servlet-class>webapp.servlet.loginpackage.LoginProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginProcess</servlet-name>
+    <url-pattern>/LoginProcess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutProcess</servlet-name>
+    <servlet-class>webapp.servlet.loginpackage.LogoutProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutProcess</servlet-name>
+    <url-pattern>/LogoutProcess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegisterProcess</servlet-name>
+    <servlet-class>webapp.servlet.loginpackage.RegisterProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterProcess</servlet-name>
+    <url-pattern>/RegisterProcess</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>AuthorizationFilter</filter-name>
+    <filter-class>webapp.servlet.loginpackage.AuthorizationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthorizationFilter</filter-name>
+    <url-pattern>/AuthorizationFilter</url-pattern>
+  </filter-mapping>
+
+  <filter>
+    <filter-name>filter1</filter-name>
+    <filter-class>webapp.servlet.Filter1</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>filter1</filter-name>
+    <url-pattern>/helloServlet</url-pattern>
+  </filter-mapping>
+
+  <listener>
+    <listener-class>webapp.servlet.Listener1</listener-class>
+  </listener>
+</web-app>

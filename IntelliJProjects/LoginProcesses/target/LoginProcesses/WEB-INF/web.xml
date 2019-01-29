@@ -1,0 +1,43 @@
+<web-app xmlns="http://java.sun.com/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
+	      http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+         version="3.0">
+
+  <servlet>
+    <servlet-name>LoginProcess</servlet-name>
+    <servlet-class>webapp.servlet.LoginProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LoginProcess</servlet-name>
+    <url-pattern>/LoginProcess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>LogoutProcess</servlet-name>
+    <servlet-class>webapp.servlet.LogoutProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>LogoutProcess</servlet-name>
+    <url-pattern>/LogoutProcess</url-pattern>
+  </servlet-mapping>
+
+  <servlet>
+    <servlet-name>RegisterProcess</servlet-name>
+    <servlet-class>webapp.servlet.RegisterProcess</servlet-class>
+  </servlet>
+  <servlet-mapping>
+    <servlet-name>RegisterProcess</servlet-name>
+    <url-pattern>/RegisterProcess</url-pattern>
+  </servlet-mapping>
+
+  <filter>
+    <filter-name>AuthorizationFilter</filter-name>
+    <filter-class>webapp.servlet.AuthorizationFilter</filter-class>
+  </filter>
+  <filter-mapping>
+    <filter-name>AuthorizationFilter</filter-name>
+    <url-pattern>/HelloUser.jsp</url-pattern>
+  </filter-mapping>
+
+</web-app>

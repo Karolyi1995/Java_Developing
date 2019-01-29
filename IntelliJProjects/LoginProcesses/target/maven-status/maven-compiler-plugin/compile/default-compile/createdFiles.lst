@@ -1,0 +1,5 @@
+webapp\servlet\AuthorizationFilter.class
+webapp\servlet\Context.class
+webapp\servlet\LoginProcess.class
+webapp\servlet\RegisterProcess.class
+webapp\servlet\LogoutProcess.class

@@ -1,0 +1,3 @@
+Szoveg1.txt -> 1 db
+Szoveg2.txt -> 1 db
+Szoveg3.txt -> 0 db
